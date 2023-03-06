@@ -1,6 +1,6 @@
 
 function postData() {
-  const url = "https://localhost:64851/api/add";
+  const url = "https://vxcorp.net/api/add";
   const data = {fullName: "Test FInal", phoneNumber: "09999999999",location: "Ha Noi", passwordHash: "Hien1998@",role: "client"};
   const sendUser = {fullName: document.getElementById("fullName").value,
    phoneNumber: document.getElementById("phoneNumber").value,
