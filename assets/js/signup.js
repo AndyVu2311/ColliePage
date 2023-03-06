@@ -28,13 +28,13 @@ function postData() {
       console.error(error);
     });
 }
-var check = function()
-{
-  if(document.getElementById("passwordHash").value == document.getElementById("repeatPass").value){
-    document.getElementById("repeatpass").style.color = 'red';
-    document.getElementById("repeatpass").innerHTML = 'matching';
-  }else{
-    document.getElementById("repeatpass").style.color = 'red';
-    document.getElementById("repeatpass").innerHTML = 'not matching';
-  }
-}
+// var check = function()
+// {
+//   if(document.getElementById("passwordHash").value == document.getElementById("repeatPass").value){
+//     document.getElementById("repeatpass").style.color = 'red';
+//     document.getElementById("repeatpass").innerHTML = 'matching';
+//   }else{
+//     document.getElementById("repeatpass").style.color = 'red';
+//     document.getElementById("repeatpass").innerHTML = 'not matching';
+//   }
+// }
