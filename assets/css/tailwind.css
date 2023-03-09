@@ -1153,6 +1153,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   /* default vxh: rgb(48 86 21 1     R22G73B85*/
   background-color: rgb(57 186 216 / var(--tw-bg-opacity));
 }
+.bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
 
 .bg-\[\#f5f8ff\] {
   --tw-bg-opacity: 1;
@@ -2029,6 +2033,131 @@ body {
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
 }
+/* Addiional TODO: Check later  */
+.w-screen {
+  width: 100vw;
+}
+.h-screen {
+  height: 100vh;
+}
+.inset-0 {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+.bg-opacity-60 {
+  --tw-bg-opacity: 0.6;
+}
+.left-1\/2 {
+  left: 50%;
+}
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.w-96 {
+  width: 24rem/* 384px */;
+}
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+.drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+.bg-indigo-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
+}
+.z-50 {
+  z-index: 50;
+}
+.py-6 {
+  padding-top: 1.5rem/* 24px */;
+  padding-bottom: 1.5rem/* 24px */;
+}
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
+  }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+.border-4 {
+  border-width: 4px;
+}
+.border-solid {
+  border-style: solid;
+}
+.border-current {
+  border-color: currentColor;
+}
+.border-r-transparent {
+  border-right-color: transparent;
+}
+.align-\[-0\.125em\] {
+  vertical-align: -0.125em;
+}
+@media (prefers-reduced-motion: reduce) {
+  @keyframes spin {
+      to {
+          transform: rotate(360deg);
+      }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .motion-reduce\:animate-\[spin_1\.5s_linear_infinite\] {
+      animation: spin 1.5s linear infinite;
+  }
+}
+.\!absolute {
+  position: absolute !important;
+}
+.\!-m-px {
+  margin: -1px !important;
+}
+.\!h-px {
+  height: 1px !important;
+}
+.\!w-px {
+  width: 1px !important;
+}
+.\!overflow-hidden {
+  overflow: hidden !important;
+}
+.\!whitespace-nowrap {
+  white-space: nowrap !important;
+}
+.\!border-0 {
+  border-width: 0px !important;
+}
+.\!p-0 {
+  padding: 0px !important;
+}
+.\!\[clip\:rect\(0\2c 0\2c 0\2c 0\)\] {
+  clip: rect(0,0,0,0) !important;
+}
+.content-center {
+  align-content: center;
+}
+/* Addiional TODO: Check later  */
+
 
 @media (min-width: 540px) {
   .sm\:flex {

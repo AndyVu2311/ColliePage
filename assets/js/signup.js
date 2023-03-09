@@ -1,5 +1,7 @@
+const { doc } = require("prettier");
 
 function postData() {
+  showSpinner();
   const url = "https://vxcorp.net/api/add";
   const data = {fullName: "Test FInal", phoneNumber: "09999999999",location: "Ha Noi", passwordHash: "Hien1998@",role: "client"};
   const sendUser = {fullName: document.getElementById("fullName").value,
@@ -16,9 +18,11 @@ function postData() {
   fetch(url, options)
     .then((response) => {
       if (response.ok) {
+        hideSpinner();
         return response.text();
       } else {
-        throw new Error("Error: " + response.status);
+        print("error");
+        throw new Error("Error: " + response.statusText);
       }
     })
     .then((json) => {
@@ -27,14 +31,48 @@ function postData() {
     .catch((error) => {
       console.error(error);
     });
+  
 }
-// var check = function()
-// {
-//   if(document.getElementById("passwordHash").value == document.getElementById("repeatPass").value){
-//     document.getElementById("repeatpass").style.color = 'red';
-//     document.getElementById("repeatpass").innerHTML = 'matching';
-//   }else{
-//     document.getElementById("repeatpass").style.color = 'red';
-//     document.getElementById("repeatpass").innerHTML = 'not matching';
-//   }
-// }
+
+
+function check()
+{
+  if(document.getElementById("passwordHash").value == document.getElementById("repeatPass").value){
+    document.getElementById("repeatpass").style.color = 'red';
+    document.getElementById("repeatpass").innerHTML = 'matching';
+  }else{
+    document.getElementById("repeatpass").style.color = 'red';
+    document.getElementById("repeatpass").innerHTML = 'not matching';
+  }
+}
+
+function showModal()
+{
+// var openButton = document.getElementById('open');
+    var dialog = document.getElementById('dialog');
+    var closeButton = document.getElementById('close');
+    var overlay = document.getElementById('overlay');
+
+    // show the overlay and the dialog
+      dialog.classList.remove('hidden');
+      overlay.classList.remove('hidden');
+
+    // hide the overlay and the dialog
+    closeButton.addEventListener('click', function () {
+      dialog.classList.add('hidden');
+      overlay.classList.add('hidden');
+    });
+}
+function showSpinner()
+{
+  var overlay = document.getElementById('overlay');
+  var showSpinner = document.getElementById('spinner');
+  overlay.classList.remove('hidden');
+  showSpinner.classList.remove('hidden');
+}
+function hideSpinner()
+{
+  var showSpinner = document.getElementById('spinner');
+  showSpinner.classList.add('hidden');
+  showModal();
+}
