@@ -1,6 +1,10 @@
-const { doc } = require("prettier");
+// const { doc } = require("prettier");
 
 function postData() {
+  if(document.getElementById('passwordHash').value.length < 6){
+    alert('Độ dài tối thiểu là 6');
+    }
+  if (check()){
   showSpinner();
   const url = "https://vxcorp.net/api/add";
   const data = {fullName: "Test FInal", phoneNumber: "09999999999",location: "Ha Noi", passwordHash: "Hien1998@",role: "client"};
@@ -31,18 +35,33 @@ function postData() {
     .catch((error) => {
       console.error(error);
     });
+  } else {
+    console.log('faill');
+  }
   
 }
 
 
 function check()
 {
-  if(document.getElementById("passwordHash").value == document.getElementById("repeatPass").value){
-    document.getElementById("repeatpass").style.color = 'red';
-    document.getElementById("repeatpass").innerHTML = 'matching';
+  var repeatPass = document.getElementById('repeatPass');
+  var passwordHash = document.getElementById('passwordHash');
+  console.log(passwordHash.value.length);
+  if((passwordHash.value == repeatPass.value) && passwordHash.value.length >= 6 ){
+    repeatPass.classList.remove('focus:border-primary-red');
+    repeatPass.classList.add('focus:border-primary');
+    return true;
   }else{
-    document.getElementById("repeatpass").style.color = 'red';
-    document.getElementById("repeatpass").innerHTML = 'not matching';
+    repeatPass.classList.add('focus:border-primary-red');
+    repeatPass.classList.remove('focus:border-primary');
+    return false;
+  }
+}
+
+function inputLenght(){
+  var passwordHash = document.getElementById('passwordHash');
+  if (passwordHash.value.length < 6){
+    alert('Độ dài tối thiểu là 6');
   }
 }
 

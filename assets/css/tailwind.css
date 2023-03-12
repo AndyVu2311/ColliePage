@@ -1120,6 +1120,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(57 186 216 / var(--tw-border-opacity));
 }
 
+.border-\[\#E9EDF4\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(233 237 244 / var(--tw-border-opacity));
+}
+
 .border-\[\#D4DEFF\] {
   --tw-border-opacity: 1;
   border-color: rgb(212 222 255 / var(--tw-border-opacity));
@@ -1201,6 +1206,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-\[\#FCFDFE\] {
   --tw-bg-opacity: 1;
   background-color: rgb(252 253 254 / var(--tw-bg-opacity));
+}
+
+/*bg red  */
+.bg-\[\#f23518\]{
+  --tw-bg-opacity: 0.5;
+  background-color: rgb(247 7 7 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#4064AC\] {
@@ -1981,6 +1992,11 @@ body {
   --tw-border-opacity: 1;
   border-color: rgb(57 186 216 / var(--tw-border-opacity));
 }
+.focus\:border-primary-red:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(247 7 7 / var(--tw-border-opacity));
+}
+
 
 .focus\:outline-none:focus {
   outline: 2px solid transparent;

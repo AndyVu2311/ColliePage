@@ -199,9 +199,10 @@
                 <img src="assets/images/logo/logo.svg" alt="logo" />
               </a>
             </div>
+            <!-- pattern="(\d|(\d,\d{0,2}))" title="YOUR_WARNING_TEXT"-->
             <form action="javascript:postData()">
               <div class="mb-6">
-                <input type="text" id="fullName" placeholder="Họ và tên:" required
+                <input type="text" id="fullName" placeholder="Họ và tên:" required 
                   class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none" />
               </div>
               <div class="mb-6">
@@ -210,12 +211,12 @@
               </div>
               <div class="mb-6">
                 <input type="password" id="passwordHash" required placeholder="Mật khẩu:"
-                  class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none" />
-                <!-- onkeyup='check();'-->
+                  class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none" onkeyup="check()" />
+                <!-- onkeyup='check();' -->
               </div>
               <div class="mb-6">
                 <input type="password" id="repeatPass" required placeholder="Nhập lại mật khẩu: "
-                  class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none" />
+                  class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary-red focus-visible:shadow-none" onkeyup="javascript:check()" />
               </div>
               <div class="mb-6">
                 <input type="text" id="location" required placeholder="Khu vực"
