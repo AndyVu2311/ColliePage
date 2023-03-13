@@ -23,6 +23,7 @@ function postData() {
     .then((response) => {
       if (response.ok) {
         hideSpinner();
+        clearInput();
         return response.text();
       } else {
         print("error");
@@ -39,6 +40,23 @@ function postData() {
     console.log('faill');
   }
   
+}
+
+function clearInput(){
+  /*
+  fullName: document.getElementById("fullName").value,
+   phoneNumber: document.getElementById("phoneNumber").value,
+   location: document.getElementById("location").value,
+   passwordHash:document.getElementById("passwordHash").value,
+   role: "Client"}
+  */
+   const inputs = document.querySelectorAll('#fullName,#phoneNumber,#location,#passwordHash,#repeatPass');
+
+   inputs.forEach(input => {
+     input.value = '';
+   });
+
+   
 }
 
 
