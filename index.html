@@ -7,6 +7,8 @@
     <title>
       CollieManagement | Quản lý, Kế toàn, CRM
     </title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     <link
       rel="shortcut icon"
       href="assets/images/logo/logo.svg"
@@ -4570,29 +4572,31 @@
               <h3 class="mb-8 text-2xl font-semibold md:text-[26px]">
                 Nhắn tin với chúng tôi!
               </h3>
-              <form>
+              <form id = "submit" action="#" >
                 <div class="mb-6">
                   <label for="fullName" class="block text-xs text-dark"
                     >Họ và tên*</label
                   >
                   <input
                     type="text"
+                    id="fName"
                     name="fullName"
-                    placeholder="Adam Gelius"
+                    placeholder="Nguyen Xuan Duc"
                     class="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
                   />
                 </div>
-                <div class="mb-6">
+                <!-- <div class="mb-6">
                   <label for="email" class="block text-xs text-dark"
                     >Email*</label
                   >
                   <input
                     type="email"
                     name="email"
+                    id="email"
                     placeholder="example@gmail.com"
                     class="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
                   />
-                </div>
+                </div> -->
                 <div class="mb-6">
                   <label for="phone" class="block text-xs text-dark"
                     >Số điện thoại*</label
@@ -4600,6 +4604,7 @@
                   <input
                     type="text"
                     name="phone"
+                    id="phoneNum"
                     placeholder="0987 654 321"
                     class="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
                   />
@@ -4611,6 +4616,7 @@
                   <textarea
                     name="message"
                     rows="1"
+                    id="mess"
                     placeholder="Viết tin nhắn của bạn ở đây!"
                     class="w-full resize-none border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
                   ></textarea>
@@ -5244,6 +5250,7 @@
     <!-- ====== All Scripts -->
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/contact.js"></script>
     <script>
       // ==== for menu scroll
       const pageLink = document.querySelectorAll(".ud-menu-scroll");
