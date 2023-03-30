@@ -166,8 +166,10 @@
             </div>
             <div class="hidden justify-end pr-16 sm:flex lg:pr-0">
               <a
-                class="loginBtn py-3 px-7 text-base font-medium text-white hover:opacity-70"
-              >
+               class="loginBtn py-3 px-7 text-base font-medium text-white hover:opacity-70"
+              role="button"
+              id="DownloadFunc"
+               >
               Tải cho Windows
               </a>
               <a
@@ -210,11 +212,15 @@
                 <li>
                   <a
                     class="inline-flex items-center justify-center rounded-lg bg-white py-4 px-6 text-center text-base font-medium text-dark transition duration-300 ease-in-out hover:text-primary hover:shadow-lg sm:px-10"
-                  >
+                    id = "DownloadFunc"
+                    role="button"
+                    >
                     Download Now
                   </a>
                 </li>
-                <!-- <li>
+
+<!-- 
+                <li>
                   <a
                     href="https://github.com/tailgrids/play-tailwind"
                     target="_blank"
@@ -235,6 +241,8 @@
                     </span>
                   </a>
                 </li> -->
+
+
               </ul>
               <div class="wow fadeInUp text-center" data-wow-delay=".3s">
                 <img
@@ -5247,10 +5255,44 @@
     </a>
     <!-- ====== Back To Top End -->
 
+
+
+      <!-- ====== Test start -->
+  <!-- test spinner  <div class="flex items-center justify-center"> -->
+
+
+  <div id="spinner"
+  class="hidden fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 bg-white rounded-md px-8 py-6 space-y-5 drop-shadow-lg items-center justify-center">
+  <div class="flex items-center justify-center">
+    <div
+      class="h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-middle content-center  motion-reduce:animate-[spin_1.5s_linear_infinite]"
+      role="status">
+    </div>
+  </div>
+</div>
+
+<!-- The dialog -->
+<div id="dialog"
+  class="hidden fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 bg-white rounded-md px-8 py-6 space-y-5 drop-shadow-lg">
+  <h1 class="text-2xl font-semibold">Gửi tin nhắn thành công</h1>
+  <div class="py-5 border-t border-b border-gray-300">
+    <p>Cảm ơn quý khách đã để lại thông tin 😊, Chuyên viên sẽ liên hệ với quý khách sớm nhất có thể.</p>
+  </div>
+  <div class="flex justify-end">
+    <!-- This button is used to close the dialog -->
+    <button id="close" class="px-5 py-2 bg-indigo-500 hover:bg-indigo-700 text-white cursor-pointer rounded-md">
+      Đóng</button>
+  </div>
+</div>
+<div id="overlay" class="fixed hidden z-40 w-screen h-screen inset-0 bg-gray-900 bg-opacity-60"></div>
+<!-- ====== Test start End -->
+
+
     <!-- ====== All Scripts -->
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/contact.js"></script>
+    <script src="assets/js/os.js"></script>
     <script>
       // ==== for menu scroll
       const pageLink = document.querySelectorAll(".ud-menu-scroll");
