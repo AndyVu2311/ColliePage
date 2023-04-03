@@ -1,3 +1,4 @@
+
 function checkOS(){
     var OSName = "Unknown";
 if (window.navigator.userAgent.indexOf("Windows NT 10.0")!= -1) OSName="Windows 10";
@@ -11,8 +12,27 @@ if (window.navigator.userAgent.indexOf("Mac")            != -1) OSName="Mac/iOS"
 if (window.navigator.userAgent.indexOf("X11")            != -1) OSName="UNIX";
 if (window.navigator.userAgent.indexOf("Linux")          != -1) OSName="Linux";
 console.log(OSName);
+if (window.navigator.userAgent.indexOf("Windows") != -1){ 
+  console.log("ok")}
+   else 
+   {
+  console.log("Not OK");
+
+ 
+  //   const inputs = document.querySelectorAll('#fullName,#phoneNumber,#location,#passwordHash,#repeatPass');
+  const para = document.querySelector('#para1');
+  para.innerHTML = 'Ứng dụng chỉ hộ trợ Windows tại thời điểm hiện tại. \n Bạn đang sử dụng ' +OSName + '\n Vui lòng thử lại sau!';
+  const title = document.querySelector('#dialogTitle')
+  title.innerHTML = "Không tải được!"
+  console.log(para);
+  showModal();
+  }
+  
 }
 let btn = document.getElementById("DownloadFunc");
 btn.addEventListener('click', event => {
   checkOS();
 });
+
+
+
