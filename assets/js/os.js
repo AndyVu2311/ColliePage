@@ -13,7 +13,10 @@ if (window.navigator.userAgent.indexOf("X11")            != -1) OSName="UNIX";
 if (window.navigator.userAgent.indexOf("Linux")          != -1) OSName="Linux";
 console.log(OSName);
 if (window.navigator.userAgent.indexOf("Windows") != -1){ 
-  console.log("ok")}
+  console.log("ok")
+  window.location.assign("https://github.com/AndyVu2311/CollieManager/releases/download/1.0.1/CollieManager.exe");
+  
+}
    else 
    {
   console.log("Not OK");
@@ -29,10 +32,15 @@ if (window.navigator.userAgent.indexOf("Windows") != -1){
   }
   
 }
-let btn = document.getElementById("DownloadFunc");
-btn.addEventListener('click', event => {
-  checkOS();
-});
+let input = document.querySelectorAll('#DownloadFunc,#DownloadFunc2')
+input.forEach(btn =>{
+  btn.addEventListener('click',(e)=>{
+    checkOS();
+  })
+})
 
+// inputs.forEach(input => {
+//   input.value = '';
+// });
 
 
